@@ -3,7 +3,6 @@
 
 // init project
 const express = require('express');
-const keepalive = require('express-glitch-keepalive');
 //const Discord = require('discord.js');
 //var hook = new Discord.WebhookClient('534099793484709888', 'upjDZSEdnCIfbyTXc3OwLnQzc7MAbDcLysBdRU0c2gNH1oMXHHXXFAkzR8bokiNTeh2w');
 
