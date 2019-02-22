@@ -34,12 +34,12 @@ app.get('/status', function(request, response) {
 });
 
 app.get('/main', function(request, response) {
-  app.use(express.static('main'));
+  app.use(express.static('/main'));
   response.sendFile(__dirname + '/main/main.html');
 });
 
 app.get('/about', function(request, response) {
-  app.use(express.static('about'));
+  app.use(express.static('/about'));
   response.sendFile(__dirname + '/about/about.html');
 });
 
