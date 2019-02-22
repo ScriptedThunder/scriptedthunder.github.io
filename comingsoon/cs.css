@@ -7,6 +7,7 @@ body, html {
 .bgimg {
     background: #333;
     height: 100%;
+    background-image: url("https://cdn.glitch.com/e2907629-9ad9-4669-8889-6c1d83447328%2Fgiphy.gif?1547918785270");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -15,16 +16,20 @@ body, html {
     font-size: 25px;
 }
 
-.topleft {
+.topmiddle {
     position: absolute;
-    top: 0;
-    left: 16px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.bottomleft {
+.bottommiddle {
     position: absolute;
-    bottom: 0;
-    left: 16px;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .middle {
@@ -37,5 +42,13 @@ body, html {
 
 hr {
     margin: auto;
-    width: 40%;
+    width: 100%;
+}
+
+/* alert box */ 
+.alert {
+  padding: 10px;
+  background-color: #FF9900;
+  color: white;
+  text-align: center;
 }

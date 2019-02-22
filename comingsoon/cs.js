@@ -1,6 +1,6 @@
 // Countdown
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2019 00:00:00").getTime();
+var countDownDate = new Date("March 31, 2019 00:00:00").getTime();
     
 // Update the count down every 1 second
 var countdownfunction = setInterval(function() {
@@ -29,7 +29,7 @@ var countdownfunction = setInterval(function() {
 }, 1000);
 
 // Scrolling Title
-(function titleScroller(text) {
+/*(function titleScroller(text) {
     
     document.title = text;
 
@@ -39,8 +39,11 @@ var countdownfunction = setInterval(function() {
 
     }, 500);
 
-}("ScriptedThunder - Coming Soon  "));
+}("ScriptedThunder - Coming Soon "));*/
 
 // Audio Volume
 var audio = document.getElementById("myaudio");
 audio.volume = 0.2;
+
+
+//

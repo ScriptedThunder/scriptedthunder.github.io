@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- language -->
+  <head>
+    <title>ScriptedThunder - Home</title> <!-- title -->
+    <meta name="description" content="Development coding"> <!-- description -->
+    <link id="favicon" rel="icon" href="https://cdn.discordapp.com/icons/454741771075977219/9121a3243c4636946e59428fa5d644a8.png" type="image/x-icon"> <!-- icon -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="prism.css" type="text/css">
+    <script src="main.js"></script>
+    <script src="prism.js"></script>
+  </head>
+  
+  <body>
+    <div class="navbar">
+      <a class="active" href="/home">Home</a>
+      <a href="/about">About</a>
+      <div class="dropdown">       
+        <button class="dropbtn">Roblox
+          <i class="fa fa-caret-down"></i>
+        </button>        
+        <div class="dropdown-content" id="myDropdown">
+          <a href="/roblox/profile">Profile</a>
+          <a href="/roblox/devforum">DevForum Profile</a>
+        </div>
+      </div>
+      <div class="dropdown">       
+        <button class="dropbtn">Code
+          <i class="fa fa-caret-down"></i>
+        </button>        
+        <div class="dropdown-content" id="myDropdown">
+          <a href="/code/css">CSS</a>
+          <a href="/code/css">HTML</a>
+          <a href="/code/nodejs">NodeJs</a>
+          <a href="/code/lua">Lua</a>
+        </div>
+      </div>
+      <!--<div style="float:right"><a class="ls" href="#">Login / Signup</a></div>-->
+    </div>
+    <p class="twitter-feed">
+      My Twitter Feed
+      <a class="twitter-timeline" data-width="250" data-height="250" data-theme="dark" data-link-color="#2B7BB9" href="https://twitter.com/ScriptedRBX?ref_src=twsrc%5Etfw">Tweets by ScriptedRBX</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </p>
+    
+    <pre><code class="language-css">p { color: red } </code></pre>
+    <pre><code class="language-css">p { color: red } </code></pre>
+    <pre><code class="language-lua">local Players = game:GetService("Players")
+ 
+    local MAX_AGE_NEW_PLAYER = 7 -- a week
+    local MIN_AGE_VETERAN = 365 -- one year
+
+    -- This function marks a part with text using a BillboardGui BillboardGui BillboardGui BillboardGui BillboardGui 
+    local function mark(part, text)
+      local bbgui = Instance.new("BillboardGui")
+      bbgui.AlwaysOnTop = true
+      bbgui.StudsOffsetWorldSpace = Vector3.new(0, 2, 0)
+      bbgui.Size = UDim2.new(0, 200, 0, 50)
+      local textLabel = Instance.new("TextLabel")
+      textLabel.Size = UDim2.new(1, 0, 1, 0) -- Fill parent
+      textLabel.Text = text
+      textLabel.TextColor3 = Color3.new(1, 1, 1)
+      textLabel.TextStrokeTransparency = 0
+      textLabel.BackgroundTransparency = 1
+      textLabel.Parent = bbgui
+      -- Add to part
+      bbgui.Parent = part
+      bbgui.Adornee = part
+    end
+
+    local function onPlayerSpawned(player, character)
+      local head = character:WaitForChild("Head")
+      if player.AccountAge >= MIN_AGE_VETERAN then
+        mark(head, "Veteran Player")
+      elseif player.AccountAge <= MAX_AGE_NEW_PLAYER then
+        mark(head, "New Player")
+      else
+        mark(head, "Regular Player")
+      end
+    end
+
+    local function onPlayerAdded(player)
+      -- Listen for this player spawning
+      if player.Character then
+        onPlayerSpawned(player, player.Character)
+      end
+      player.CharacterAdded:Connect(function ()
+        onPlayerSpawned(player, player.Character)
+      end)
+    end
+
+    -- Listen for players being added
+    for _, player in pairs(Players:GetPlayers()) do
+      onPlayerAdded(player)
+    end
+    Players.PlayerAdded:Connect(onPlayerAdded) </code></pre>
+    
+    <!--<button id="post-btn" onclick="discordtest()">Discord Test</button>-->    
+  </body>
+</html>
