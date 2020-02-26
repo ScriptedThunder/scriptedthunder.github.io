@@ -297,7 +297,7 @@
 }
 
 .privateChannels-1nO12o .channel-2QD9_O:nth-child(1):not([style*="opacity: 1;"]),.privateChannels-1nO12o .channel-2QD9_O:nth-child(2):not([style*="opacity: 1;"]),.privateChannels-1nO12o .channel-2QD9_O:nth-child(3):not([style*="opacity: 1;"]),.privateChannels-1nO12o .channel-2QD9_O:nth-child(4):not([style*="opacity: 1;"]) {
-	display: inline-block;
+	display: inline-table;
 	max-width: 25%;
 	overflow: visible
 }
