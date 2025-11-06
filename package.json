@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ScriptedThunder/scriptedthunder.github.io#readme",
   "dependencies": {
-    "discord.js": "^11.4.2",
+    "discord.js": "^11.6.4",
     "express": "^4.16.4",
     "node-fetch": "^2.6.7",
     "request": "^2.88.0"
