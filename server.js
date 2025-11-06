@@ -2,8 +2,6 @@ const express = require('express');
 
 const app = express();
 
-app.use(keepalive);
-
 app.get('/', function(request, response) {
   app.use(express.static('comingsoon'));
   response.sendFile(__dirname + '/comingsoon/cs.html');
