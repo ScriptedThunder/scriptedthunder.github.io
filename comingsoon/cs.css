@@ -16,22 +16,6 @@ body, html {
     font-size: 25px;
 }
 
-.topmiddle {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.bottommiddle {
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
 .middle {
     position: absolute;
     top: 50%;
@@ -51,4 +35,9 @@ hr {
   background-color: #FF9900;
   color: white;
   text-align: center;
+}
+
+/* Countdown */
+#demo {
+    font-weight: bold;
 }
