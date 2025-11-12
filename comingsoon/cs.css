@@ -22,6 +22,11 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
 }
 
 hr {
@@ -33,11 +38,23 @@ hr {
 .alert {
   padding: 10px;
   background-color: #FF9900;
+  text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
   color: white;
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
+  font-size: 25px;
 }
 
 /* Countdown */
 #demo {
     font-weight: bold;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
 }
