@@ -29,14 +29,14 @@ var countdownfunction = setInterval(function() {
 }, 1000);
 
 // Scrolling Title
-(function titleScroller(text) {
+// (function titleScroller(text) {
     
-    document.title = text;
+//     document.title = text;
 
-    setTimeout(function () {
+//     setTimeout(function () {
 
-        titleScroller(text.substr(1) + text.substr(0, 1));
+//         titleScroller(text.substr(1) + text.substr(0, 1));
 
-    }, 500);
+//     }, 500);
 
-}("ScriptedThunder - Coming Soon "));
+// }("ScriptedThunder - Coming Soon "));
